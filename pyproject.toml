@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dupe-scout"
+version = "1.0.0"
+description = "A read-only, size-first SHA-256 duplicate-file finder with JSON and CSV reports"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+dupe-scout = "dupe_scout.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dupe_scout*"]
